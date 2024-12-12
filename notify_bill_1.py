@@ -86,7 +86,7 @@ def calc_signal(symbol = 'ETHUSDT', timeframe = '15m', limit = 200):
     message = f"{dt.datetime.now().strftime('%Y-%m-%d %H:%M')} {symbol}\nMarket Condition: {market_condition}\nAction: {action}\nSignal: {signal}\nClose Price: {current_close}\nLower Band: {round(lower_band.iloc[-1], 2)}\nUpper Band: {round(upper_band.iloc[-1], 2)}"
     return message
 
-def notify_signal(bot_token = 'AAFnKBMH6wyrF2LSR7ZjF_elByf3XiJAFUo', chat_id = '1088035988', message = 'SIGNAL FOR BILL'):
+def notify_signal(bot_token = '1088035988:AAFnKBMH6wyrF2LSR7ZjF_elByf3XiJAFUo', chat_id = '1088035988', message = 'SIGNAL FOR BILL'):
     try:
         url = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=' + chat_id + '&parse_mode=markdown&text=' + message
         response = requests.get(url)
@@ -98,7 +98,7 @@ def notify_signal(bot_token = 'AAFnKBMH6wyrF2LSR7ZjF_elByf3XiJAFUo', chat_id = '
         
 if __name__ == "__main__":
     # Telegram Config
-    bot_token = 'AAFnKBMH6wyrF2LSR7ZjF_elByf3XiJAFUo'
+    bot_token = '1088035988:AAFnKBMH6wyrF2LSR7ZjF_elByf3XiJAFUo'
     chat_id = '1088035988'
     # Fetch Historical Data from Binance / Binance US / Your Exchange
     symbols = ['BTCUSDT', 'ETHUSDT']
